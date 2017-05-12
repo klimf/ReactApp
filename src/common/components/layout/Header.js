@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
             <footer>
-                <h1>FOOTER</h1>
+                <h1>HEADER</h1>
             </footer>
         );
     }

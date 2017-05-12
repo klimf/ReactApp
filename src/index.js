@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from "react-redux";
 import {BrowserRouter as Router} from "react-router-dom";
 import App from './app/App';
-import {initStore} from "./app/Store";
+import {initStore} from "./app/services/store";
 
 const initState = window.__PRELOADED_STATE__;
 const store = initStore(initState);

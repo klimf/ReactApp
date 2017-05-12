@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import Header from "../components/layout/Header";
+import Header from "../common/components/layout/Header";
 import Routes from "./Routes";
-import Footer from "../components/layout/Footer";
-import ScrollFix from "../components/wrappers/ScrollFix";
+import Footer from "../common/components/layout/Footer";
+import ScrollFix from "../common/components/layout/ScrollFix";
 
 class App extends Component {
+
+    constructor() {
+        super()
+
+    }
+
     render() {
         return (
             <div>
-                <Header {...this.props} />
-                <ScrollFix {...this.props}>
+                <Header  />
+                <ScrollFix >
                     <Routes {...this.props} />
                 </ScrollFix>
-                <Footer {...this.props}/>
+                <Footer />
             </div>
         );
     }
