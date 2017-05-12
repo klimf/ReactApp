@@ -1,9 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import {Provider} from "react-redux";
+import {BrowserRouter as Router} from "react-router-dom";
+import App from './app/App';
+import {initStore} from "./app/Store";
+
+const initState = window.__PRELOADED_STATE__;
+const store = initStore(initState);
+delete window.__PRELOADED_STATE__;
 
 ReactDOM.render(
-  <App />,
-  document.getElementById('root')
+    <Provider store={store}>
+        <Router>
+            <App/>
+        </Router>
+    </Provider>,
+    document.getElementById('root')
 );
+
+import "./styles/main.scss";
